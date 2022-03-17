@@ -13,10 +13,25 @@
   <hr>
   <?php
 
-  $idade = 34;
+  $idade = 70;
   $peso = 30;
 
-  //ifs.......
+
+  if ($idade >= 16 & $idade <= 69) {
+    echo "Pode Doar";
+  }else{
+    echo "Você não tem idade para doar";
+  }
+  if ($peso >50) {
+    echo "Você não está no peso ideal";
+  }
+
+  ?>
+  <p><b>Idade 34 anos: </b> <?= $idade ?></p>
+  <p><b>Peso 30: </b>  <?= $peso ?> </p>
+  
+
+ <!--  //ifs.......
   /**
    * Se idade >= 16 E idade <= 69
    *  if peso > 50
@@ -25,9 +40,9 @@
    *      não pode doar por conta do peso
    * senão
    *  não pode doar por conta da idade
-   */
+   */ -->
 
-  ?>
+  
 </body>
 
 </html>
