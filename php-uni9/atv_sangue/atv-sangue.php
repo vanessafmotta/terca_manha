@@ -10,11 +10,11 @@
 </head>
 
 <body>
-  <h1 class="h1">Análise de doador de Sangue</h1>
+  <h1 class="h1">Análise de Doador De Sangue</h1>
   <hr>
   <div class="login-box">
     <div class="requisitos">
-      <h2>O usuário deve ter entre 16 e 69 anos edeve pesar mais de 50 Kg.</h2>
+      <h2>O usuário deve ter entre 16 e 69 anos deve pesar mais de 50 kg.</h2>
     </div>
     <div>
       <form method="post" action="atv-sangue.php" class="form">
