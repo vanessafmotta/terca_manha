@@ -15,15 +15,30 @@
     $altura = $_POST["altura"];
     $valor_imc = calculaIMC($peso, $altura);
 
-    function calculaIMC($peso, $altura) {
+    function calculaIMC($peso, $altura)
+    {
         $imc = $peso / ($altura * $altura);
         return $imc;
     }
 
-    //desafio do tio: Criar um método de classificação, 
-    //baseado neste link: https://arquivos.sbn.org.br/equacoes/eq5.htm 
-    function classificaIMC($imc) {
-        return "calcular a classificação...";
+    function classificaIMC($imc)
+    {
+        $classificacao = "";
+        if ($imc < 18.5) {
+            return "Abaixo do peso";
+        } elseif ($imc >= 18.5 && $imc <= 24.9) {
+            return "Peso normal";
+        } elseif ($imc >= 25 && $imc <= 29.9) {
+            return "Sobrepeso";
+        } elseif ($imc >= 30 && $imc <= 34.9) {
+            return "Obesidade grau I";
+        } elseif ($imc >= 35 && $imc <= 39.9) {
+            return "Obesidade grau II";
+        } else {
+            return "Obesidade grau III";
+        }
+
+        return $classificacao;
     }
 
     ?>
@@ -39,7 +54,10 @@
         <p><b>IMC: </b><?= number_format($valor_imc, 2, ',') ?></p>
         <!-- Alternativa:
         <p><b>IMC: </b><?php printf('%.2f', $valor_imc); ?></p> -->
-        <p><b>Classificação: </b> <?= classificaIMC($valor_imc)?> </p>
+        <p><b>Classificação: </b> <?= classificaIMC($valor_imc) ?> </p>
+        <form>
+            <input class="bt-voltar" type="button" value="Calcular novamente" onClick="JavaScript: window.history.back();">
+        </form>
     </div>
 
 </body>
