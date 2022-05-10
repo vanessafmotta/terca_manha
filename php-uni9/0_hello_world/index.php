@@ -1,56 +1,58 @@
-<!DOCTYPE html>
-<html lang='pt-br'>
+    <!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hello World</title>
+    </head>
+    <body>
+        <!-- isso é um comentário  -->
+        <h1>Minha primeira página PHP</h1>
+        <hr>
+        <br>
 
-<head>
-	<meta charset='UTF-8'>
-	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
-	<meta name='viewport' content='width=device-width, initial-scale=1.0'>
-	<title>Hello World</title>
-</head>
+        <?php //isso é um blodo de código PHP...
+            //isso é um comentário dentro do PHP
+            /**
+             * Isso é um 
+             * bloco que comentários
+             */
 
-<body>
-	<!-- isso é um comentário -->
-	<h1>Minha primeira página php</h1>
-	<hr>
-	<br>
-	<?php
-	//comentário np php em linha 
-	/* comentário em bloco */
+            //isso é uma variável textual (String):
+            $nome = 'Thiago G. Traue';
 
-	// isso é uma variável
-	$nome = 'Vanessa F. Mota';
+            //essa é uma variável de valor inteiro:
+            $idade = 34;
 
-	//variável de valor inteiro
+            //variável de ponto flutuante (real)
+            $altura = 1.83;
 
-	$idade = 30;
+            //variável booleana (verdadeira ou falsa)
+            $fumante = true;
 
-	// variável do tipo flutuante(real)
+            //outra variável textual
+            $time = "Bragantino"; //você pode usar aspas simples ou duplas
+        ?>
 
-	$altura = 1.83;
+        <h2>Dados do usuáro:</h2>
+        <br>
+        <p>Nome: <?= $nome ?></p>
+        <p>Idade: <?= $idade ?></p>
+        <p>Time que torce: <?= $time ?></p>
+        <p>Altura: <?= $altura ?></p>
 
-	// variável boolena(verdadeira ou falsa)
+        <?php
+            // if($fumante) { //SE... verdadeiro (condição booleana), entre no bloco
+            //     echo('<p>Fuma? Sim!</p>');
+            // } else {
+            //     echo('<p>Fuma? Não!</p>');
+            // }
+        ?>
 
-	$fumante = false;
+        <!-- é o mesmo que....: -->
+        <p>Fuma? <?= $fumante ? 'Sim' : 'Não' ?> </p>
 
-	// isso é uma variável textual
-
-	$time = 'Palmeiras';
-
-	?>
-	<h2>Dados do usuário</h2>
-	<br>
-	<p>Nome: <?= $nome ?></p>
-	<p>Idade: <?= $idade ?></p>
-	<p>Time que torce: <?= $time ?></p>
-	<p>Altura: <?= $altura ?></p>
-	<?php
-	//  if($fumante){
-	// echo('<p>Fuma ? Sim !</p>');
-	// }else{
-	// echo('<p>Fuma ? Não !</p>');
-	// } 
-	?>
-	<p> Fuma? <?= $fumante ? 'Sim' : 'Não' ?></p>
-</body>
-
-</html>
+        
+    </body>
+    </html>
